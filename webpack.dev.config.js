@@ -8,7 +8,7 @@ module.exports = {
   ],
 
   output: {
-    path: path.join(__dirname, 'dist'), // Must be an absolute path
+    path: path.join(__dirname, 'docs'), // Must be an absolute path
     filename: 'index.js',
     publicPath: '/'
   },

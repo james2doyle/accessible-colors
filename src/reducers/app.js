@@ -10,7 +10,6 @@ import { UPDATE_TEXT_COLOR, BLUR_TEXT_COLOR,
 import { UPDATE_COLOR, CORRECT_COLOR } from 'actions/color';
 import colorReducer from 'reducers/color';
 
-
 const defaults = {
   bg: 'EEEEEE',
   color: '747474',
@@ -65,9 +64,11 @@ const initialState = {
 function updateUrl(key, value) {
   if (history.pushState && typeof URLSearchParams === 'function') {
     const searchParams = new URLSearchParams(window.location.search);
+
     searchParams.set(key, value);
 
     const path = window.location.protocol + '//' + window.location.host + window.location.pathname + '?' + searchParams.toString();
+
     window.history.pushState({ path }, '', path);
   }
 }

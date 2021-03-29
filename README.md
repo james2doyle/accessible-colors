@@ -1,6 +1,6 @@
-[![Build Status][status-image]][status-url]
+> A fork from [moroshko/accessible-colors](https://github.com/moroshko/accessible-colors) that includes some improvements
 
-# <a href="http://accessible-colors.com" target="_blank">Accessible Colors</a>
+# <a href="https://james2doyle.github.io/accessible-colors" target="_blank">Accessible Colors</a>
 
 ## Development
 
@@ -17,6 +17,4 @@ npm test
 
 ## License
 
-[status-image]: https://img.shields.io/codeship/c8788a20-270e-0133-4d2a-723b2a0a3044/master.svg
-[status-url]: https://codeship.com/projects/97245
 [MIT](http://moroshko.mit-license.org)

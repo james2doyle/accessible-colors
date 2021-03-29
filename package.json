@@ -4,18 +4,18 @@
   "description": "Automatically find the closest accessible color combination",
   "repository": {
     "type": "git",
-    "url": "https://github.com/moroshko/accessible-colors.git"
+    "url": "https://github.com/james2doyle/accessible-colors.git"
   },
   "author": "Misha Moroshko <michael.moroshko@gmail.com>",
   "scripts": {
-    "start": "rm -rf dist && mkdir -p dist && npm run copy-static-files && node server",
+    "start": "rm -rf docs && mkdir -p docs && npm run copy-static-files && node server",
     "lint": "eslint src server.js webpack.dev.config.js webpack.prod.config.js",
     "test": "mocha --compilers js:babel-core/register --recursive src/**/*.test.js",
     "test-watch": "mocha --compilers js:babel-core/register --recursive src/**/*.test.js --watch --reporter min",
-    "copy-static-files": "cp src/index.html src/favicon.png src/icons.css dist/ && cp -r src/fonts dist/",
-    "dist": "rm -rf dist/ && mkdir dist && npm run copy-static-files && NODE_ENV=production webpack --config webpack.prod.config.js",
+    "copy-static-files": "cp src/index.html src/favicon.png src/icons.css docs/ && cp -r src/fonts docs/",
+    "docs": "rm -rf docs/ && mkdir docs && npm run copy-static-files && NODE_ENV=production webpack --config webpack.prod.config.js",
     "prebuild": "npm run lint && npm test",
-    "build": "npm run dist"
+    "build": "npm run docs"
   },
   "dependencies": {
     "add-commas": "0.0.4",

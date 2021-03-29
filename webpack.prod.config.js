@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index',
 
   output: {
-    filename: './dist/index.js'
+    filename: './docs/index.js'
   },
 
   module: {
@@ -31,7 +31,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new ExtractTextPlugin('./dist/app.css'),
+    new ExtractTextPlugin('./docs/app.css'),
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false
